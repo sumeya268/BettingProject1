@@ -1,0 +1,26 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio workspace
+*.slnx
+*.sqlite
+*.db
+*.cache
+
+# Backup & logs
+*.log
+*.tlog
+
+# Others
+*.tmp
+*.temp
