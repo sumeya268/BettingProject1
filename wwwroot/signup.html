@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slips – Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="auth-body">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <div class="auth-container">
+        <div class="auth-box">
+
+            <!-- SIGNUP SUCCESS MESSAGE (NOW IN THE RIGHT PLACE) -->
+            <div id="signupSuccess" class="signup-success" style="display:none;">
+                Signup successful!
+            </div>
+
+            <h1 class="auth-title">Create your account</h1>
+
+            <form id="signupForm">
+
+                <label class="auth-label">Username</label>
+                <input class="auth-input" type="text" id="signupUsername" required>
+
+                <label class="auth-label">Email</label>
+                <input class="auth-input" type="email" id="signupEmail" required>
+
+                <label class="auth-label">Password</label>
+                <input class="auth-input" type="password" id="signupPassword" required>
+
+                <button type="submit" class="auth-button">Create Account</button>
+            </form>
+
+            <p class="auth-switch">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </p>
+
+        </div>
+    </div>
+
+    <!-- PAGE TYPE MUST COME FIRST -->
+    <script>
+        window.PAGE_TYPE = "signup";
+    </script>
+
+    <!-- THEN LOAD SCRIPT -->
+    <script src="signup.js"></script>
+
+</body>
+</html>
