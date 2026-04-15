@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slips – Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Splash screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-logo">Slips Betting</div>
+    </div>
+
+    <!-- Top bar -->
+    <header class="top-bar">
+        <div class="logo">
+            Slips <span class="logo-sub">MULTI‑SPORT BETTING</span>
+        </div>
+
+        <!-- Login/Signup (guest mode) -->
+        <div class="top-right" id="authButtons">
+            <a href="login.html" class="top-btn">Login</a>
+            <a href="signup.html" class="top-btn">Sign Up</a>
+        </div>
+
+        <!-- Logged-in user panel -->
+        <div class="top-right" id="userPanel" style="display:none;">
+            <div class="welcome-user">
+                Welcome back, <span id="usernameDisplay"></span>!
+            </div>
+
+            <div class="balance" id="balanceWrapper">
+                Balance: <span id="balanceAmount">£0.00</span>
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">Log out</button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <button class="nav-btn active" data-tab="bettingSection">Betting</button>
+        <button class="nav-btn" data-tab="resultsSection">Results</button>
+        <button class="nav-btn" data-tab="myBetsSection">My Bets</button>
+    </nav>
+
+    <!-- Main layout -->
+    <main class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <section class="panel">
+                <h2>Sports</h2>
+                <ul>
+                    <li>Football</li>
+                    <li>Basketball</li>
+                    <li>American Football</li>
+                    <li>Horse Racing</li>
+                    <li>Formula 1</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Betting section -->
+        <section id="bettingSection" class="tab-section">
+            <h1>Available Matches</h1>
+
+            <!-- Sport Filter Buttons -->
+            <div class="sport-filter">
+                <button class="sport-btn active" data-sport="All">All</button>
+                <button class="sport-btn" data-sport="Football">Football</button>
+                <button class="sport-btn" data-sport="Basketball">Basketball</button>
+                <button class="sport-btn" data-sport="American Football">American Football</button>
+                <button class="sport-btn" data-sport="Horse Racing">Horse Racing</button>
+                <button class="sport-btn" data-sport="F1">F1</button>
+            </div>
+
+            <p id="guestWarning" class="guest-warning" style="display:none;">
+                Please log in to place bets.
+            </p>
+
+            <div id="matchesContainer"></div>
+        </section>
+
+        <!-- Results section -->
+        <section id="resultsSection" class="tab-section" style="display:none;">
+            <h1>Match Results</h1>
+            <div id="resultsList"></div>
+        </section>
+
+        <!-- My bets section -->
+        <section id="myBetsSection" class="tab-section" style="display:none;">
+            <h1>My Bets</h1>
+            <div id="myBetsList"></div>
+        </section>
+
+        <!-- Bet slip -->
+        <aside class="betslip" id="betslipWrapper">
+            <h2>Bet Slip</h2>
+
+            <div id="betslipList" class="betslip-selections">
+                No selections yet. Tap odds to add a bet.
+            </div>
+
+            <div class="betslip-controls">
+                <label>Stake (£):</label>
+                <input type="number" id="stakeInput" min="0" step="1" value="0">
+
+                <div class="betslip-summary">
+                    <div>
+                        <span>Total Odds:</span>
+                        <span id="totalOdds">1.00</span>
+                    </div>
+                    <div>
+                        <span>Potential Return:</span>
+                        <span id="potentialReturn">£0.00</span>
+                    </div>
+                </div>
+
+                <button id="placeBetBtn" class="place-bet-btn">Place Bet</button>
+            </div>
+
+            <footer class="betslip-footer">
+                CST2550 Group Project – Multi‑Sport Betting Platform
+            </footer>
+        </aside>
+
+    </main>
+
+
+    <script>
+        window.PAGE_TYPE = "main";
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 
